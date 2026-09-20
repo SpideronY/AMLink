@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="AMLink — Agent Memory Link">
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#e879f9"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#e879f9" stop-opacity="0.85"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.2" fill="#30363d" opacity="0.35"/>
+    </pattern>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background card -->
+  <rect width="1280" height="320" rx="18" fill="#0d1117"/>
+  <rect width="1280" height="320" rx="18" fill="url(#grid)"/>
+  <circle cx="170" cy="160" r="150" fill="#22d3ee" opacity="0.05"/>
+  <circle cx="240" cy="200" r="120" fill="#e879f9" opacity="0.05"/>
+
+  <!-- network motif : hub + 4 harness satellites -->
+  <g stroke="url(#line)" stroke-width="2" stroke-dasharray="4 6" opacity="0.75">
+    <line x1="170" y1="160" x2="78"  y2="72"/>
+    <line x1="170" y1="160" x2="262" y2="72"/>
+    <line x1="170" y1="160" x2="78"  y2="248"/>
+    <line x1="170" y1="160" x2="262" y2="248"/>
+  </g>
+
+  <!-- chain-link hub (the "Link") -->
+  <g transform="translate(170,160)" filter="url(#glow)">
+    <rect x="-30" y="-13" width="34" height="26" rx="13" fill="none" stroke="url(#accent)" stroke-width="5"/>
+    <rect x="-4"  y="-13" width="34" height="26" rx="13" fill="none" stroke="url(#accent)" stroke-width="5"/>
+  </g>
+
+  <!-- satellites -->
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <g>
+      <circle cx="78" cy="72" r="17" fill="#161b22" stroke="url(#accent)" stroke-width="2.5"/>
+      <text x="78" y="77" font-size="14" font-weight="700" fill="#e6edf3">C</text>
+      <text x="78" y="102" font-size="11" fill="#8b949e">Codex</text>
+    </g>
+    <g>
+      <circle cx="262" cy="72" r="17" fill="#161b22" stroke="url(#accent)" stroke-width="2.5"/>
+      <text x="262" y="77" font-size="14" font-weight="700" fill="#e6edf3">O</text>
+      <text x="262" y="102" font-size="11" fill="#8b949e">OpenCode</text>
+    </g>
+    <g>
+      <circle cx="78" cy="248" r="17" fill="#161b22" stroke="url(#accent)" stroke-width="2.5"/>
+      <text x="78" y="253" font-size="14" font-weight="700" fill="#e6edf3">Z</text>
+      <text x="78" y="278" font-size="11" fill="#8b949e">ZCode</text>
+    </g>
+    <g>
+      <circle cx="262" cy="248" r="17" fill="#161b22" stroke="url(#accent)" stroke-width="2.5"/>
+      <text x="262" y="253" font-size="14" font-weight="700" fill="#e6edf3">A</text>
+      <text x="262" y="278" font-size="11" fill="#8b949e">Antigravity</text>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="362" y="138" font-size="84" font-weight="800" fill="#f0f6fc" letter-spacing="2">AMLink</text>
+    <rect x="364" y="156" width="300" height="6" rx="3" fill="url(#accent)"/>
+    <text x="362" y="204" font-size="30" font-weight="600" fill="#e6edf3">Agent Memory Link</text>
+    <text x="362" y="236" font-size="19" fill="#8b949e">Universal session bridge &amp; locator for AI coding agents</text>
+  </g>
+
+  <!-- chips -->
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle">
+    <rect x="362" y="262" width="104" height="30" rx="15" fill="#161b22" stroke="url(#accent)" stroke-width="1.5"/>
+    <text x="414" y="282" fill="#e6edf3">MCP server</text>
+
+    <rect x="476" y="262" width="176" height="30" rx="15" fill="#161b22" stroke="url(#accent)" stroke-width="1.5"/>
+    <text x="564" y="282" fill="#e6edf3">0-token local search</text>
+
+    <rect x="662" y="262" width="70" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+    <text x="697" y="282" fill="#c9d1d9">Codex</text>
+
+    <rect x="742" y="262" width="92" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+    <text x="788" y="282" fill="#c9d1d9">OpenCode</text>
+
+    <rect x="844" y="262" width="70" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+    <text x="879" y="282" fill="#c9d1d9">ZCode</text>
+
+    <rect x="924" y="262" width="112" height="30" rx="15" fill="#161b22" stroke="#30363d"/>
+    <text x="980" y="282" fill="#c9d1d9">Antigravity</text>
+  </g>
+</svg>

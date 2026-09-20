@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/amlink-banner.svg" alt="AMLink — Agent Memory Link" width="100%">
+</p>
+
 # AMLink — Agent Memory Link
 
 **A local MCP server that lets any AI coding agent instantly find and resume a session created in another agent.**
