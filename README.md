@@ -60,24 +60,15 @@ uv run install.py --uninstall  # cleanly remove everything it added
 | `save_active_session(title, summary, files_touched, project, next_steps, source_harness)` | Unified checkpoint written to `~/.session-bridge/checkpoints/` — use it when a harness doesn't persist sessions in plain sight, or before an interruption (rate limit). |
 | `refresh_index()` | Force an index rebuild (normal cache expires after 60 s or as soon as a source's mtime changes). |
 
-## What the injected payload looks like
+## What gets injected — and what doesn't
 
-```markdown
-# 🔗 SESSION BRIDGE — Auditer paywalls et onboarding
-```yaml
-harness: codex          session_id: 01a0b55b-…
-project: ~/Projets/…    created / last_activity
-model: gpt-5.6-sol      git_branch: main
-```
-## 🎯 Objective (initial prompt)     ← the real first user message (injections filtered)
-## 🔄 Recent exchanges               ← last N user/assistant messages
-## 🛠 Recent actions                 ← last commands executed
-## 📁 Files touched                  ← deduplicated + per-file operation counts
-## ✅ Remaining todos                ← when the harness stores them
-## ▶️ Resume — last agent message    ← where the previous agent stopped
-```
-
-Typical size on real data: **4.5–8.5 KB per session** — versus a 13,500-character raw prompt or a megabyte-scale SQLite database.
+Each session is condensed into a small Markdown/YAML payload — typically
+**4.5–8.5 KB on real data** (versus a 13,500-character raw prompt or a
+megabyte-scale SQLite database). It contains: metadata (harness, session id,
+project, dates, model, git branch), the objective (the real first user
+message), the last exchanges, the last executed commands, files touched with
+per-file operation counts, remaining todos, and the last agent message as
+the resume point.
 
 **Deliberately excluded** (this is where the token savings come from): harness-injected blocks (`# AGENTS.md instructions`, `<environment_context>`, `<app-context>`, system reminders), raw tool outputs and diffs (only paths + counters survive), the full message history beyond the last N exchanges, and sub-agent sessions.
 
