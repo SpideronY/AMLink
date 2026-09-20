@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/amlink-banner.svg" alt="AMLink — Agent Memory Link" width="100%">
+  <img src="docs/amlink-banner.png" alt="AMLink — Agent Memory Link" width="100%">
 </p>
 
 # AMLink — Agent Memory Link
