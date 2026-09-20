@@ -1,0 +1,8 @@
+[project]
+name = "amlink"
+version = "0.1.0"
+description = "AMLink (Agent Memory Link) — local MCP server that lets any AI coding agent instantly find and resume a session created in another agent (Codex, OpenCode, ZCode, Antigravity)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=4.0.5",
+]

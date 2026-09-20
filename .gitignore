@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# uv virtual environment (uv.lock IS committed: this is an application)
+.venv/
+
+# Local runtime data (checkpoints & index cache live in ~/.session-bridge,
+# but ignore them here just in case of local overrides)
+.session-bridge/
+
+# Harness workspace state (created when running agents inside this repo)
+.zcode/
+.antigravity/
+.codex/
+
+# Local configuration overrides
+config.local.json
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

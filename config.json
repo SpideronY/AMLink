@@ -1,0 +1,61 @@
+{
+  "$comment": [
+    "AMLink (Agent Memory Link) — harness storage mapping.",
+    "Leave a value null => automatic per-OS detection (see README).",
+    "Any explicit value overrides the default. '~' is supported.",
+    "Windows: use 'C:/Users/<name>/...' (forward slashes are fine)."
+  ],
+  "harnesses": {
+    "codex": {
+      "enabled": true,
+      "home": null,
+      "state_db": null,
+      "sessions_dir": null
+    },
+    "opencode": {
+      "enabled": true,
+      "db": null
+    },
+    "zcode": {
+      "enabled": true,
+      "db": null
+    },
+    "antigravity": {
+      "enabled": true,
+      "root": null,
+      "projects_dir": null
+    }
+  },
+  "checkpoints_dir": null,
+  "cache": {
+    "enabled": true,
+    "path": null,
+    "ttl_seconds": 60
+  },
+  "payload_limits": {
+    "minimal": {
+      "first_prompt_max_chars": 600,
+      "last_messages": 3,
+      "message_max_chars": 300,
+      "files_max": 15,
+      "recent_actions": 0,
+      "todos_max": 10
+    },
+    "standard": {
+      "first_prompt_max_chars": 1500,
+      "last_messages": 6,
+      "message_max_chars": 600,
+      "files_max": 40,
+      "recent_actions": 5,
+      "todos_max": 15
+    },
+    "full": {
+      "first_prompt_max_chars": 4000,
+      "last_messages": 12,
+      "message_max_chars": 1200,
+      "files_max": 100,
+      "recent_actions": 10,
+      "todos_max": 30
+    }
+  }
+}
